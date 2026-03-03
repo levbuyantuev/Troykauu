@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 30% 98%;
+    --foreground: 30 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 15%;
+    --primary: 45 90% 50%;
+    --primary-foreground: 30 20% 10%;
+    --secondary: 45 25% 95%;
+    --secondary-foreground: 30 20% 15%;
+    --muted: 45 15% 94%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 43 95% 55%;
+    --accent-foreground: 30 20% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 45 90% 50%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 30 20% 15%;
+    --sidebar-primary: 45 90% 50%;
+    --sidebar-primary-foreground: 30 20% 10%;
+    --sidebar-accent: 45 25% 95%;
+    --sidebar-accent-foreground: 30 20% 15%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 45 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-yellow-400;
+  }
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  }
+}
